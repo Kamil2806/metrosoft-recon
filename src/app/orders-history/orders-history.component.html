@@ -1,0 +1,50 @@
+<h1 class="title">Orders history</h1>
+<mat-divider></mat-divider>
+
+<div class="content">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef>
+        <span class="table-header">No.</span>
+        </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <span class="table-data">{{element.position}}</span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>
+        <span class="table-header">Name</span>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <span class="table-data">{{element.name}}</span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Order Date Column -->
+    <ng-container matColumnDef="orderDate">
+      <mat-header-cell *matHeaderCellDef>
+        <span class="table-header">Order date</span>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <span class="table-data">{{element.orderDate}}</span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef>
+        <span class="table-header">Price</span>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <span class="table-data">{{element.price}}</span>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

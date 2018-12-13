@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body{
+  padding: 20px;
+  font-family: "Arial Black", serif;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: darkseagreen;
+  margin-bottom: 0;
+}
+
+.divider {
+  color: darkseagreen;
+  margin-bottom: 30px;
+}
+
+.content {
+  margin: 60px 0;
+}
+
+mat-header-cell {
+  background: lightgray;
+}
+
+mat-row {
+  background-color: darkseagreen;
+}
+
+.table-data {
+  color: white;
+}
+
+.table-header {
+  color: black;
+}
+
+

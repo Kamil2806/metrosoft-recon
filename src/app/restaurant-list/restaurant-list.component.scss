@@ -1,0 +1,18 @@
+.tile-container-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restaurantTile {
+  width: 33%;
+  margin-bottom: 30px;
+
+  & img {
+    margin-right: 25%;
+    margin-left: 25%;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

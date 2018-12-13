@@ -1,0 +1,12 @@
+<h1 class="title">Restaurants</h1>
+<mat-divider></mat-divider>
+
+<div class="tile-container-flex content">
+  <div class="restaurantTile" *ngFor="let restaurant of restaurants">
+    <nav>
+      <a routerLink="/{{restaurant}}/mealsList">
+        <img src="../../assets/avatars/{{restaurant}}.PNG" width="200px" height="200px" alt="{{restaurant}}"/>
+      </a>
+    </nav>
+  </div>
+</div>

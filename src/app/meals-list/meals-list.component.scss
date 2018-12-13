@@ -1,0 +1,19 @@
+.meal-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-row {
+  margin: 20px;
+
+  &:hover {
+    color: darkseagreen;
+    cursor: pointer;
+  }
+}
+
+mat-row:hover {
+  background-color: lightgray;
+  cursor: pointer
+}
