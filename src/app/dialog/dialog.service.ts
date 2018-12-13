@@ -9,7 +9,7 @@ export class DialogService {
 
   constructor(public dialog: MatDialog) {}
 
-  openDialog(): void {
+  public openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '250px'
     });
