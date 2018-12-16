@@ -2,12 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
 import {
-  MatButtonModule, MatDialogModule,
+  MatButtonModule, MatDialogModule, MatFormFieldModule,
   MatGridListModule,
-  MatIconModule,
+  MatIconModule, MatInputModule,
   MatListModule,
   MatMenuModule,
   MatTableModule
@@ -19,6 +20,9 @@ import {MealsListService} from "./meals-list/meals-list.service";
 import { OrdersHistoryComponent } from './orders-history/orders-history.component';
 import {DialogService} from "./dialog/dialog.service";
 import {DialogComponent} from "./dialog/dialog.component";
+import { LoginFormComponent } from './login-form/login-form.component';
+import {ControlContainer, ReactiveFormsModule} from "@angular/forms";
+import {StateMatcherService} from "./state-matcher.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import {DialogComponent} from "./dialog/dialog.component";
     MealsListComponent,
     MenuComponent,
     OrdersHistoryComponent,
-    DialogComponent
+    DialogComponent,
+    LoginFormComponent
   ],
   entryComponents: [
     DialogComponent
@@ -42,11 +47,17 @@ import {DialogComponent} from "./dialog/dialog.component";
     MatButtonModule,
     MatListModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [
     MealsListService,
-    DialogService
+    DialogService,
+    StateMatcherService,
+    ControlContainer
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,28 @@
+<form class="login-form">
+
+  <!-- Email input -->
+  <mat-form-field>
+    <input matInput placeholder="Email" [formControl]="emailFormControl"
+           [errorStateMatcher]="matcher">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Password input -->
+  <mat-form-field>
+    <input matInput placeholder="Password" [formControl]="passwordFormControl"
+           [errorStateMatcher]="matcher">
+    <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">
+      Please enter a valid password
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Login button -->
+  <nav>
+    <a routerLink="/restaurants">
+      <button mat-raised-button class="accept-button">Login</button>
+    </a>
+  </nav>
+
+</form>
